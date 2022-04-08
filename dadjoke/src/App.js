@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
          {/*Joke component*/}
-           <Joke/>
+           <Joke />
     </div>
   );
 }
