@@ -4,7 +4,7 @@ const Joke = () => {
     const [joke, setJokes] = useState([]);
 
 
-    const apiLink = "https://icanhazdadjoke.com/";
+    const apiLink = "https://us-central1-my-first-project-337919.cloudfunctions.net/assignment-20";
 
     const fetchData = async () => {
         const res = await axios.get(`${apiLink}`, { headers: { Accept: "application/json" } });
