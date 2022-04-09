@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
+import { Button } from 'react-bootstrap';
 import axios from 'axios'
+import './Joke.css';
 const Joke = () => {
     const [joke, setJokes] = useState([]);
 
@@ -12,12 +14,8 @@ const Joke = () => {
         setJokes([res.data.joke]);
     }
     return (
-        <div className="joke__">
-            <h1>Jokes:</h1>
-               {/*Fetch data from url*/}
-                <button onClick={fetchData}>Load jokes</button>
-
-                     {/*data from api goes here*/}
+        <div className="joke">
+                <Button onClick={fetchData}>Get a Joke</Button>
                     {joke && joke.map((j, index) => (
                          <div className="data" key={index}>
                           {j}
